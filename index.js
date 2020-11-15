@@ -65,4 +65,4 @@ bot.on("message", async message => {
 
 
 
-bot.login("");
+bot.login("NzY0NzYyODcyODk4OTEyMjg2.X4K-7Q.zpXyr083UOUVVJtBrosBxVKzBGM");
