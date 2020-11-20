@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const db = require('quick.db');
 
 module.exports.run = async (bot, message, args) => {
-    if(!message.content.startsWith('!'))return;  
+    if(!message.content.startsWith('.'))return;  
 
     let messagefetch = db.fetch(`messages_${message.guild.id}_${message.author.id}`)
     let levelfetch = db.fetch(`level_${message.guild.id}_${message.author.id}`)
