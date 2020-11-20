@@ -24,7 +24,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity(`Loading Online Users...`);
+  bot.user.setActivity(``);
   bot.user.setStatus('online');
 })
 
@@ -43,11 +43,11 @@ bot.on("message", async message => {
   let messagefetch = db.fetch(`messages_${message.guild.id}_${message.author.id}`)
 
   let messages;
-  if (messagefetch == 25) messages = 25; //Level 1
-  else if (messagefetch == 65) messages = 65; // Level 2
-  else if (messagefetch == 115) messages = 115; // Level 3
-  else if (messagefetch == 200) messages = 200; // Level 4
-  else if (messagefetch == 300) messages = 300; // Level 5
+  if (messagefetch == 1000) messages = 1000; //Level 1
+  else if (messagefetch == 2500) messages = 2500; // Level 2
+  else if (messagefetch == 4500) messages = 4500; // Level 3
+  else if (messagefetch == 6000) messages = 6000; // Level 4
+  else if (messagefetch == 10000) messages = 10000; // Level 5
 
   if (!isNaN(messages)) {
     db.add(`level_${message.guild.id}_${message.author.id}`, 1)
