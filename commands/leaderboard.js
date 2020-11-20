@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const db = require('quick.db');
 
 module.exports.run = async (bot, message, args) => {
-    if(!message.content.startsWith('!'))return;  
+    if(!message.content.startsWith('.'))return;  
 
     const embed = new Discord.RichEmbed()
     .setDescription(`Level Leaderboard: \`!leaderboard levels\` || Message Leaderboard: \`!leaderboard messages\``)
